@@ -159,7 +159,7 @@ img {
 
 /* media queries */
 /* for screens 540px to 719px wide */
-@media screen and (min-width: 540px) and (max-width: 719px) {   
+@media screen and (max-width: 719px) {   
     /* hides criteria text */
     .panel {
         max-height: 0;
