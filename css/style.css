@@ -7,8 +7,9 @@
      font-family: OpenSans-Regular;
 }
 
-/* flex layout, main flex container */
-body {
+html, body {
+    width: 100%;
+    height: 100%;
     margin: 0;
     background-color: black;
 }
@@ -59,9 +60,9 @@ body {
     padding: 2em 2em;
 }
 .accordion, .panel {
-    margin: 0em 1em;
     max-width: 960px;
     width: 100vw;
+    margin: 0em 1em;
 }
 .accordion {
     padding: 1em;
@@ -157,15 +158,28 @@ img {
     padding-left: 1em;
 }
 
+
+/* DOES NOT WORK */
+label {
+    font-size: 26px;
+    display: none;
+}
+#toggle {
+    display: none;
+}
+
+
+
+
+
 /* media queries */
-/* for screens 540px to 719px wide */
+/* for screens 719px and smaller (includes 540px) */
 @media screen and (max-width: 719px) {   
     /* hides criteria text */
     .panel {
         max-height: 0;
         transition: max-height 0.2s ease-out;
     }
-
     .accordion:after {
         content: '\02795'; /* Unicode character for "plus" sign (+) */
         font-size: 1em;
@@ -173,20 +187,55 @@ img {
         float: right;
         margin-left: 0.5em;   
     }
-      
     .active:after {
         content: "\2796"; /* Unicode character for "minus" sign (-) */
     }
+    
+    
+    label {
+        display: block;
+    }
+    nav {
+        text-align: left;
+        flex-basis: 100%;
+        width: 100%;
+        display: none;
+    }
+    nav a {
+        display: block;
+        margin: 0;
+    }
+    #toggle:checked + nav {
+        display: block;
+    }
 }
-/* for screens 720px to 1439px wide */
-@media screen and (min-width: 720px) and (max-width: 1439px) {
+/* for screens 720px to 1079px wide */
+@media screen and (min-width: 720px) and (max-width: 1079px) {
     /* shows criteria text */
     .panel {
         display: block;
     }
+
+    label {
+        display: block;
+    }
+    nav {
+        text-align: left;
+        flex-basis: 100%;
+        width: 100%;
+        display: none;
+    }
+    nav a {
+        display: block;
+        margin: 0;
+    }
+    #toggle:checked + nav {
+        display: block;
+    }
+
 }
-/* for screens 1440px and wider */
-@media screen and (min-width: 1440px) {
+/* for screens 1080px and wider (includes 1440px) */
+@media screen and (min-width: 1080px) {
     /* shows criteria text */
     .panel {
         display: block;
