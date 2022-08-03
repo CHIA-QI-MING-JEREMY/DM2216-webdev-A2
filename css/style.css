@@ -159,7 +159,6 @@ img {
 }
 
 
-/* DOES NOT WORK */
 label {
     font-size: 26px;
     display: none;
@@ -167,9 +166,6 @@ label {
 #toggle {
     display: none;
 }
-
-
-
 
 
 /* media queries */
