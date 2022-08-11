@@ -233,6 +233,13 @@ img {
     #menu {
         transition: 0.2s ease-in-out;
     }
+
+    #qrTitle {
+        display: none;
+    }
+    #qrcode {
+        display: none;
+    }
 }
 /* for screens 720px to 1079px wide */
 @media screen and (min-width: 720px) and (max-width: 1079px) {
@@ -266,6 +273,12 @@ img {
         display: block;
     }
 
+    #qrTitle {
+        display: none;
+    }
+    #qrcode {
+        display: none;
+    }
 }
 /* for screens 1080px and wider (includes 1440px) */
 @media screen and (min-width: 1080px) {
